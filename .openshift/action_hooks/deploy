@@ -16,15 +16,15 @@ if [ "$OPENSHIFT_APP_DNS" == "$OPENSHIFT_GEAR_DNS" ]
 then
   if [ ! -f ${OPENSHIFT_DATA_DIR}.magento-sample-installed ]
   then
-    echo "Downloading magento-sample-data-1.9.0.0.tar.gz ..."
-    curl -o ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}.tar.gz http://www.magentocommerce.com/downloads/assets/1.9.0.0/magento-sample-data-1.9.0.0.tar.gz
-    echo "Extracting sample data"
-    tar xvzf ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}.tar.gz -C $OPENSHIFT_TMP_DIR 2>&1 >/dev/null
-    echo "Deleting sample data tar ball"
-    rm -rf ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}.tar.gz
+    #echo "Downloading magento-sample-data-1.9.0.0.tar.gz ..."
+    #curl -o ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}.tar.gz http://www.magentocommerce.com/downloads/assets/1.9.0.0/magento-sample-data-1.9.0.0.tar.gz
+    #echo "Extracting sample data"
+    #tar xvzf ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}.tar.gz -C $OPENSHIFT_TMP_DIR 2>&1 >/dev/null
+    #echo "Deleting sample data tar ball"
+    #rm -rf ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}.tar.gz
 
     # Move the media and skin folder into its correct place
-    cp -r ${OPENSHIFT_REPO_DIR}misc/media $OPENSHIFT_DATA_DIR
+    #cp -r ${OPENSHIFT_REPO_DIR}misc/media $OPENSHIFT_DATA_DIR
     cp -r ${OPENSHIFT_REPO_DIR}misc/skin $OPENSHIFT_DATA_DIR
     cp -r ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/media/* ${OPENSHIFT_DATA_DIR}media
     cp -r ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/skin/* ${OPENSHIFT_DATA_DIR}skin
@@ -113,4 +113,3 @@ then
   mv ${OPENSHIFT_REPO_DIR}php/app/etc/local.xml ${OPENSHIFT_DATA_DIR}
 fi
 ln -sf ${OPENSHIFT_DATA_DIR}local.xml ${OPENSHIFT_REPO_DIR}php/app/etc/local.xml
-
