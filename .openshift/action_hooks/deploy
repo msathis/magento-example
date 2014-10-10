@@ -26,10 +26,10 @@ then
     # Move the media and skin folder into its correct place
     #cp -r ${OPENSHIFT_REPO_DIR}misc/media $OPENSHIFT_DATA_DIR
     cp -r ${OPENSHIFT_REPO_DIR}misc/skin $OPENSHIFT_DATA_DIR
-    cp -r ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/media/* ${OPENSHIFT_DATA_DIR}media
-    cp -r ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/skin/* ${OPENSHIFT_DATA_DIR}skin
-    chmod -R o+w ${OPENSHIFT_DATA_DIR}media
-    chmod -R o+w ${OPENSHIFT_DATA_DIR}skin
+    #cp -r ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/media/* ${OPENSHIFT_DATA_DIR}media
+    #cp -r ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/skin/* ${OPENSHIFT_DATA_DIR}skin
+    #chmod -R o+w ${OPENSHIFT_DATA_DIR}media
+    #chmod -R o+w ${OPENSHIFT_DATA_DIR}skin
   fi
 elif [ -d ${OPENSHIFT_REPO_DIR}.openshift/magento/media ]
 then
