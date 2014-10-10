@@ -69,8 +69,8 @@ then
   touch ${OPENSHIFT_DATA_DIR}.magento-sample-installed
 elif [ ! -f ${OPENSHIFT_DATA_DIR}.magento-sample-installed ]
 then
-  echo "Poulating database"
-  mysql -h${OPENSHIFT_MYSQL_DB_HOST} -P${OPENSHIFT_MYSQL_DB_PORT} -u${OPENSHIFT_MYSQL_DB_USERNAME} -p${OPENSHIFT_MYSQL_DB_PASSWORD} ${OPENSHIFT_APP_NAME} < ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/magento_sample_data_for_1.9.0.0.sql
+  #echo "Poulating database"
+  #mysql -h${OPENSHIFT_MYSQL_DB_HOST} -P${OPENSHIFT_MYSQL_DB_PORT} -u${OPENSHIFT_MYSQL_DB_USERNAME} -p${OPENSHIFT_MYSQL_DB_PASSWORD} ${OPENSHIFT_APP_NAME} < ${OPENSHIFT_TMP_DIR}${SAMPLE_NAME}/magento_sample_data_for_1.9.0.0.sql
 
   echo "Magento admin password: $MAGENTO_ADMIN_PASSWORD"
 
